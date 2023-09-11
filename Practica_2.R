@@ -50,3 +50,54 @@ if(temp<35){
   print("Temperatura normal")   #ahora abarca todas las posibilidades
 }
 #b
+dias=c("Domingo","Lunes","Martes","Miercoles","Jueves","Viernes","Sabado")
+nro_dia=1:7
+dia<-readline("Ingrese un dia/nro de dia de la semana:")
+  if (nchar(dia)==1){
+     dia=as.integer(dia)
+  }
+  if (is.na(dia)==TRUE){
+    cat("Error - Intentalo nuevamente")
+  }
+for (i in 1:length(dias)){
+  if (tolower(dia)==tolower(dias[i])){
+    cat("El numero de dia correspondiente al ingresado es",nro_dia[i])
+  }else if (dia==nro_dia[i]){
+ cat("El dia de la semana correspondiente al numero ingresado es",dias[i])
+  }else {
+    print("Error - Intentalo nuevamente")   #me lo imprime 7 veces :()
+  }
+}
+
+#Ejercicio 5----
+#a
+A=readline("Ingrese un numero entero:")
+nros_a=strsplit(A,"")
+for (i in 1:nchar(A)){
+  if (nros_a[[1]][i]=="."){
+    print("El numero ingresado no es entero.")
+  }
+}
+B=readline("Ingrese un numero entero:")
+nros_b=strsplit(B,"")
+for (i in 1:nchar(B)){
+  if (nros_b[[1]][i]=="."){
+    print("El numero ingresado no es entero.")
+  }
+}
+division=as.integer(A)/as.integer(B)
+nros_division=strsplit(as.character(division),"")
+for (i in 1:nchar(division)){
+  if (nros_division[[1]][i]=="."){
+    print("A no es multiplo entero de B")
+  }else if (is.na(as.integer(division))==TRUE){
+    print("A no es multiplo entero de B")
+  }else{
+    print("A es multiplo entero de B") ##me lo imprime 2 veces :///
+  }
+}
+#b
+
+
+#Ejercicio 6-----
+
