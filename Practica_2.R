@@ -61,13 +61,16 @@ dia<-readline("Ingrese un dia/nro de dia de la semana:")
   }
 for (i in 1:length(dias)){
   if (tolower(dia)==tolower(dias[i])){
-    cat("El numero de dia correspondiente al ingresado es",nro_dia[i])
+    msj<-paste("El numero de dia correspondiente al ingresado es",nro_dia[i],sep=" ")
+    break
   }else if (dia==nro_dia[i]){
- cat("El dia de la semana correspondiente al numero ingresado es",dias[i])
+  msj<-paste("El dia de la semana correspondiente al numero ingresado es",dias[i],sep=" ")
+  break
   }else {
-    print("Error - Intentalo nuevamente")   #me lo imprime 7 veces :()
+    msj<-"Error - Intentalo nuevamente"   #me lo imprime 7 veces :(
   }
 }
+print(msj)
 
 #Ejercicio 5----
 #a
@@ -100,4 +103,3 @@ for (i in 1:nchar(division)){
 
 
 #Ejercicio 6-----
-
