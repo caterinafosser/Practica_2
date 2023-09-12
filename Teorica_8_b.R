@@ -84,3 +84,11 @@ media_3<-apply(c,c(1,2),mean) #promedio en el tiempo
 desvio_1<-apply(c,c(1,3),sd)
 desvio_2<-apply(c,c(2,3),sd)
 desvio_3<-apply(c,c(1,2),sd)
+
+datos<-read.table("juntas_1960-2018.txt",header=TRUE,sep="",fill=TRUE) #(o pegando el directorio y el archivo asi podria agarrar archivos de distintas carpetas)
+datos[datos==-99.9]<-NA
+dim(datos)
+datos_peque=datos[6571:21170,]
+posadas<-datos_peque[,8]
+pp_x_anio<-array(posadas,dim=c(365,40))
+acum_anual<-colSums(pp_x_anio,na.rm=T)
