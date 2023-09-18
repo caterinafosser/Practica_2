@@ -103,3 +103,24 @@ for (i in 1:nchar(division)){
 
 
 #Ejercicio 6-----
+repeat{
+  sueldo<-as.numeric(readline("Ingrese su sueldo en u$s: "))
+  if (sueldo>=0&&is.na(sueldo)==F){
+    break
+  }
+}
+if (sueldo<6000){
+  impuesto=0
+}else if (sueldo>=6000&&sueldo<20000){
+  impuesto=(sueldo-6000)*0.17
+}else if (sueldo>=20000&&sueldo<50000){
+  impuesto=2380+(sueldo-20000)*0.3
+}else if (sueldo>=5000&&sueldo<60000){
+  impuesto=11380+(sueldo-50000)*0.42
+}else {
+  impuesto=15580+(sueldo-60000)*0.47
+}
+cat("El impuesto correspondiente al sueldo ingresado es de",impuesto,"u$s")
+
+
+#Ejercicio 7-----
